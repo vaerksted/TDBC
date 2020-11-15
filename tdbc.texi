@@ -1,0 +1,95 @@
+\input texinfo   @c -*-texinfo-*-
+@c %**start of header
+@setfilename tdbc.info
+@settitle TDBC
+@setchapternewpage off
+@c %**end of header
+
+@dircategory Tcl
+@direntry
+* TDBC: (tdbc).                 Tcl Database Connectivity.
+@end direntry
+
+@include version.texi
+
+@node Top
+@top TDBC
+This manual (@value{UPDATED}) is for TDBC (version @value{VERSION}).
+
+@menu
+* tdbc::		Tcl Database Connectivity
+* Tdbc_Init::		C procedures to facilitate writing TDBC drivers
+* tdbc connection::	Connection objects for drivers
+* tdbc mapSqlState::	Map SQLSTATE to error class
+* tdbc resultset::	TDBC result set object
+* tdbc statement::	TDBC statement object
+* tdbc tokenize::	TDBC SQL tokenizer
+* tdbc mysql::		TDBC-MYSQL bridge
+* tdbc odbc::		TDBC-ODBC bridge
+* tdbc postgres::	TDBC-POSTGRES bridge
+* tdbc sqlite3::	TDBC driver for the SQLite3 database manager
+
+@end menu
+
+@node tdbc
+
+Tcl Database Connectivity (TDBC) is a common interface for Tcl programs to
+access SQL databases.
+
+@node Tdbc_Init
+
+The TDBC library provides several C procedures that simplify writing a TDBC
+driver.
+
+@node tdbc connection
+
+Every database driver for TDBC (Tcl DataBase Connectivity) implements a
+connection object  that  represents a connection to a database.
+
+@node tdbc mapSqlState
+
+The tdbc::mapSqlState command accepts a string that is expected to be a five-
+character 'SQL state' as returned from a SQL database when an error occurs.
+
+@node tdbc resultset
+
+Every database driver for TDBC (Tcl DataBase Connectivity) implements a
+result set object that represents a the results returned from executing SQL
+statement in a database.
+
+@node tdbc statement
+
+Every database driver for TDBC (Tcl DataBase Connectivity) implements a
+statement object that represents a SQL statement in a database.
+
+@node tdbc tokenize
+
+As a convenience to database drivers, Tcl Database Connectivity (TDBC)
+provides a command to break SQL code apart into tokens so that bound
+variables can readily be identified and substituted.
+
+@node tdbc mysql
+
+The tdbc::mysql driver provides a database interface that conforms to Tcl
+DataBase Connectivity (TDBC) and allows a Tcl script to connect to a MySQL
+database.
+
+@node tdbc odbc
+
+The tdbc::odbc driver provides a database interface that conforms to Tcl
+DataBase Connectivity (TDBC) and allows a Tcl script to connect to any SQL
+database presenting an ODBC interface.
+
+@node tdbc postgres
+
+The tdbc::postgres driver provides a database interface that conforms to Tcl
+DataBase Connectivity (TDBC) and allows a Tcl script to connect to a Postgres
+database.
+
+@node tdbc sqlite3
+
+The tdbc::sqlite3  driver provides a database interface that conforms to Tcl
+DataBase Connectivity (TDBC) and allows a Tcl script to connect to a SQLite3
+database.
+
+@bye
